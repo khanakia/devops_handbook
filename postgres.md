@@ -2,6 +2,12 @@
 
 ### Useful Commands
 
+#### Install Postgres CLI only on Ubuntu
+
+```
+sudo apt-get install postgresql-client
+```
+
 **Print Server Version**
 
 ```
@@ -10,7 +16,7 @@ sudo -u postgres psql -c "SELECT version();"
 ## Outputs:  PostgreSQL 13.3 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44), 64-bit
 ```
 
-### Enable UUID for database
+#### Enable UUID for database
 
 if you get this error `ERROR: could not open extension control file "/usr/pgsql-13/share/extension/uuid-ossp.control": No such file or directory` then install contrib package&#x20;
 
@@ -18,7 +24,7 @@ if you get this error `ERROR: could not open extension control file "/usr/pgsql-
 sudo yum install postgresql13-contrib
 ```
 
-#### Enable UUID Extension
+#### Login to Psql and run below commands to install UUID extension
 
 ```
 \c mydb
